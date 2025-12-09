@@ -1,0 +1,26 @@
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+} 
+
+.action-btn {
+    border: none;
+    padding: 16px 10px;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    background: snow;
+}
+
+#content {
+    width: 500px;
+    margin: 0 auto;
+    background: aliceblue;
+    border-radius: 29px;
+    padding: 16px;
+}
