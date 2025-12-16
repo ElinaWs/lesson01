@@ -128,3 +128,33 @@ const markFilm = () => {
 markFilmsBn.addEventListener('click', markFilm)
 
 
+const contentBlk = () => {
+    clearContent()
+
+    
+    const input = document.createElement('input');
+    input.value = movies[index].title;
+
+    const btn = document.createElement('button');
+    btn.textContent = 'Save';
+
+    btn.onclick = () => {
+        const newTitle = input.value.trim();
+        if (!newTitle) return;
+
+        movies[index].title = newTitle;
+        showFilms();
+    };
+
+    appContent.append(input, btn);
+}
+
+    function deleteMovie(index) {
+        movies.splice(index, 1);
+        showFilms();
+}
+
+
+markFilmsBn.addEventListener('click', contentBlk)
+
+
