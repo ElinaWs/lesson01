@@ -19,7 +19,7 @@ body {
     color: rgb(145, 226, 238);
 }
 
-.container {
+.app-container {
     margin: 0 auto;
     padding: 20px;
     display: flex;

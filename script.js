@@ -99,3 +99,32 @@ const findFilm = () => {
 findFilmsBn.addEventListener('click', findFilm)
 
 
+const markFilm = () => {
+    clearContent()
+
+    const input = document.createElement('input');
+  input.placeholder = "Film's name";
+
+  const markFilmbtn = document.createElement('button');
+  markFilmbtn.textContent = 'Edit status';
+
+  markFilmbtn.onclick = () => {
+    const movie = movies.find(
+      m => m.title.toLowerCase() === input.value.toLowerCase()
+    );
+    if (!movie) {
+      alert('Film is not definded');
+      return;
+    }
+
+    movie.isAvailable = !movie.isAvailable;
+    showFilms();
+  };
+
+  appContent.append(input, markFilmbtn);
+}
+
+
+markFilmsBn.addEventListener('click', markFilm)
+
+
