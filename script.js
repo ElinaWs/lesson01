@@ -32,3 +32,29 @@ const showFilms = () => {
 
 
 showFilmsBn.addEventListener('click', showFilms)
+
+
+const addFilm = () => {
+    clearContent()
+
+    const newFilmInput = document.createElement('input');
+    newFilmInput.placeholder = "Film's name";
+
+    const addFilmBtn = document.createElement('button');
+    addFilmBtn.textContent = 'Add film';
+
+    addFilmBtn.addEventListener('click', () => {
+        const title = newFilmInput.value.trim();
+        if (!title) return; {
+            movies.push({ title, isAvailable: true });
+            showFilms();
+        }
+    });
+
+    contentBlock.append(newFilmInput, addFilmBtn);
+}
+
+
+addFilmsBn.addEventListener('click', addFilm)
+
+
